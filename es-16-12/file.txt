@@ -8,10 +8,11 @@ SELECT *
 FROM `courses`
 WHERE `cfu` > 10;
 
-3.= 3494
+3.= 3338
 SELECT * 
-FROM `students`
-WHERE `date_of_birth` <= '1992-12-16';
+FROM `students` 
+WHERE YEAR(CURRENT_TIMESTAMP) - YEAR(`date_of_birth`) > 30
+ORDER BY `date_of_birth`DESC;
 
 4.
 SELECT * 
