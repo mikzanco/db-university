@@ -23,7 +23,7 @@
     FROM `students`
     JOIN `degrees` ON `students`.`degree_id` = `degrees`.`id`
     JOIN `departments` ON `degrees`.`department_id` = `departments`.`id`
-    ORDER BY `students`.`surname`;
+    ORDER BY `students`.`surname`, `students`.`name`;
 
 5. 
     SELECT DISTINCT`degrees`.`name` AS `nome_corso_di_laurea`, `courses`.`name` AS `nome_corsi`, `teachers`.`id`, `teachers`.`name` AS `nome_insegnante`
@@ -42,3 +42,6 @@
     JOIN `departments` ON `degrees`.`department_id` = `departments`.`id`
     WHERE `departments`.`name` = 'Dipartimento di Matematica'
     ORDER BY `teachers`.`surname`;
+
+7.BONUS
+
